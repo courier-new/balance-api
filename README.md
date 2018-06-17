@@ -1,7 +1,7 @@
-# README
+# Balance API
+###### RUBY ON RAILS | POSTGRESQL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
 Things you may want to cover:
 
@@ -21,11 +21,60 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+---
+
+## Set Up
+
+#### Installing Prerequisites
+This project currently runs on Ruby **version 2.5.0**, tracked in `.ruby-version`. We recommend using [rbenv](https://github.com/rbenv/rbenv) with its plugin [ruby-build](https://github.com/rbenv/ruby-build) to install and manage your Ruby version. You may choose to use `rvm` or another Ruby version manager instead, but we prefer `rbenv` for its featherweight simplicity (read more about why [here](https://github.com/rbenv/rbenv/wiki/Why-rbenv%3F)).
+
+To install and set up Ruby and `rbenv`, follow these [setup instructions](https://gorails.com/setup/).
+
+Once you have `rbenv` set up, install the appropriate version of Ruby.
+
+```
+➜  ~ rbenv install 2.5.0
+```
+
+If definition 2.5.0 is not found, you may have to update `ruby-build`.
+
+Clone the repository and move to the new repo's directory on your machine. Use `bundler` to install the project's package dependencies with the right versions.
+
+```
+➜  ~ gem install bundler
+➜  ~ bundle install
+```
+
+#### Creating the Database
+
+Next, create, migrate, and seed the database. Balance uses `postgresql` as its database of choice, so be sure to first install postgres for your OS and make sure its service is running if you have not already done so before proceeding.
+```
+➜  ~ bundle exec rake db:create
+➜  ~ bundle exec rake db:migrate
+```
+
+Migrating your database will overwrite `schema.rb` with an identical file that uses double quotes instead of single quotes. To automatically fix this file, run a pass with the project's Ruby linter [rubocop](https://github.com/rubocop-hq/rubocop).
+```
+➜  ~ bundle exec rubocop -a
+```
+
+#### Verifying it Works
+
+Verify that everything is working by starting the rails server and, while the server is running, making a request in a separate terminal window.
+
+```
+➜  ~ bundle exec rails s
+-------------------------------------------------
+➜  ~ curl -G http://localhost:3000/api/v0/users
+[]
+```
+
+Congrats! You can now develop on the soon-to-be best budget-keeping API out there!!!!!!
 
 
+---
 
-## How to Make this App
+## Making this Project
 
 ```
 ➜  ~ ruby -v
