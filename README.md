@@ -3,29 +3,15 @@
 
 ## About
 
-Things you may want to cover:
+<!-- TODO: Add project description/intro -->
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Coming soon!
 
 ---
 
-## Set Up
+## Getting Started
 
-#### Installing Prerequisites
+#### Install Prerequisites
 This project currently runs on Ruby **version 2.5.0**, tracked in `.ruby-version`. We recommend using [rbenv](https://github.com/rbenv/rbenv) with its plugin [ruby-build](https://github.com/rbenv/ruby-build) to install and manage your Ruby version. You may choose to use `rvm` or another Ruby version manager instead, but we prefer `rbenv` for its featherweight simplicity (read more about why [here](https://github.com/rbenv/rbenv/wiki/Why-rbenv%3F)).
 
 To install and set up Ruby and `rbenv`, follow these [setup instructions](https://gorails.com/setup/).
@@ -45,7 +31,7 @@ Clone the repository and move to the new repo's directory on your machine. Use `
 ➜  ~ bundle install
 ```
 
-#### Creating the Database
+#### Create the Database
 
 Next, create, migrate, and seed the database. Balance uses `postgresql` as its database of choice, so be sure to first install postgres for your OS and make sure its service is running if you have not already done so before proceeding.
 ```
@@ -58,7 +44,7 @@ Migrating your database will overwrite `schema.rb` with an identical file that u
 ➜  ~ bundle exec rubocop -a
 ```
 
-#### Verifying it Works
+#### Verify it Works
 
 Verify that everything is working by starting the rails server and, while the server is running, making a request in a separate terminal window.
 
@@ -71,6 +57,12 @@ Verify that everything is working by starting the rails server and, while the se
 
 Congrats! You can now develop on the soon-to-be best budget-keeping API out there!!!!!!
 
+
+---
+
+## Testing
+
+<!-- TODO: Set up tests with rspec -->
 
 ---
 
@@ -170,3 +162,17 @@ Now is a good time to connect to our remote repository on Github, commit our cha
 ...
 ➜  ~ git push --set-upstream origin master
 ```
+
+---
+
+## Changelog
+
+View recent changes [here](https://github.com/courier-new/balance-api/blob/master/CHANGELOG.md).
+
+---
+
+## License
+
+This project and its source code are licensed under the MIT license. See [here](https://github.com/courier-new/balance-api/blob/master/LICENSE) for additional details.
+
+Made with ♥ by Kelli Rockwell [@courier-new](https://github.com/courier-new/balance-api/tree/master).
